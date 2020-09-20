@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "page/home/home",
+    "page/me/me",
+    "test/testpage2/testpage2",
+    "page/up/up",
+    "page/message/message",
+    "page/userenter/userenter",
+    "test/testpage1/testpage1",
+    "page/detail/detail",
+    
+    "page/discuss/discuss"
+  ],
+  "window": {
+    "backgroundColor": "#CC9900",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

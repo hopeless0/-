@@ -1,0 +1,54 @@
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+
+}
+.mainContent{
+  display: flex;
+  flex-direction: column;
+
+  background-image:url('https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/3982my-photo.png?sign=e627d21bf7318ec847210809fc2e1eba&t=1600081993');
+
+  
+  width:500rpx;
+  height:800rpx;
+  background-size:500rpx;
+  
+  background-repeat:no-repeat;
+  
+}
+.title
+{  
+  padding-top:180rpx;
+  text-align: center;
+  padding-bottom:100rpx;
+  font-size:150%;
+  font-weight:650;
+  
+
+}
+.content{
+  
+  text-align: center;
+  font-weight:500;
+  padding:0 50rpx 180rpx 50rpx;
+
+
+
+}
+.reject{
+
+  font-size:150%;
+  font-weight:600;
+  text-align:center;
+}

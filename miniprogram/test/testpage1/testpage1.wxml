@@ -1,0 +1,31 @@
+<view bindtap="testfunction">
+<button>测试</button>
+<view class="p">a</view>
+<view>{{content}}</view>
+
+</view>
+<view>
+<image src="{{fileID}}" mode="top"></image>
+</view>
+<button bindtap="upl">upl</button>
+
+<import src="./../../common/html/normal.wxml"/>
+
+<block wx:for="{{Data}}" wx:key="*this">
+  
+  <navigator url="./../testpage2/testpage2" bindtap="nextone" data-index="{{Data[index].title}}" >
+  <view class="box">
+    <template is="BOX" data="{{...Data[index]}}"/>
+  </view>
+</navigator>
+
+</block>
+<form catchsubmit="formSubmit" catchreset="formReset">
+<input placeholder="enter" name="input"></input>
+<picker name="picker" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view >
+      当前选择: {{date}}
+    </view>
+  </picker>
+<button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+</form>

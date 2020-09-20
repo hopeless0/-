@@ -1,0 +1,31 @@
+<template name="BOX">   
+<view class="box" >
+  <view class="boxContent">
+    <text class='boxtitle'> {{title}} </text>  
+    <view class="boxdate">
+    <text>{{Issuing}}</text>
+    <text>{{datestart}}to {{dateend}}</text>
+  </view>   
+  </view>
+  <image src="{{fileID}}" mode="aspectFit" class="boximage"></image>  
+  <view wx:if='{{shown}}'>
+<cover-image src='https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/9970my-photo.png?sign=b78e5064359950ec5c18c25ea66bad90&t=1600185399' class='overImage' wx:if='{{overdue}}'></cover-image>    
+<cover-image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/8934my-photo.png' class='overImage' wx:if='{{ongoing}}'></cover-image>
+<cover-image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/3677my-photo.png' class='overImage' wx:if='{{comingSoon}}'></cover-image>
+</view>
+<cover-image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/2429my-photo.png' class='overImage' wx:if='{{!shown}}'></cover-image>
+</view>
+
+</template>
+
+<template name="background">
+  <image src="https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/966my-photo.png?sign=027e53cf7d680815cacb5e837b9d6d7d&t=1599919418" class="bimage" mode="scaleToFill"></image>
+</template>
+<template name='moveable'>  
+<movable-area >
+        <movable-view x="{{x}}" y="{{y}}" bindchange='onchange' direction="horizontal" inertia >
+          <image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/281my-photo.png' mode='aspectFit'></image>  
+        </movable-view>
+</movable-area>
+<view class='movableText'>{{content}}</view>  
+</template>

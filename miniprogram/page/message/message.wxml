@@ -1,0 +1,29 @@
+<!--miniprogram/page/message/message.wxml-->
+<import src="./../../common/html/normal.wxml"/>
+<form catchsubmit="formSubmit" >
+<view class='bigbox'>
+  <text class='text'>合作与推广</text>
+  <view class='textarea'>
+  <view wx:if="{{cooperation}}" class='tohidden'> <!--由于预设内容无法换行，使用其他方法实现-->
+<text>也许有我们未收集的活动 告知各位联系</text>     
+<text>也许有我们未接触的合作 欢迎各位提议</text>
+<text>也许有我们未发现的伙伴 咨询我们详细</text>
+  </view>
+  <textarea  name='cooperation'id='cooperation' bindinput='deleteCooperation'></textarea>
+</view></view>
+<view class='bigbox'>
+  <text class='text'>意见与反馈</text>
+  <view class='textarea'>
+  <view wx:if='{{idea}}' class='tohidden'>
+    <text>也许有我们未考虑的事宜 提醒我们修订</text>
+    <text>也许有我们未接受的赞美 分享我们欢喜</text>
+  </view>
+  <textarea  name='idea'id='idea' bindinput='deleteIdea'></textarea>
+</view>
+</view>
+<button  type="primary" formType="submit" plain='true' >提交</button>
+</form>
+
+
+<toast id='toast'></toast>
+<template is="background" />

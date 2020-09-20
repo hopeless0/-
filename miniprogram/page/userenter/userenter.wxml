@@ -1,0 +1,51 @@
+<!--miniprogram/page/userenter/userenter.wxml-->
+<view wx:if='{{stateOne}}' class='tohidden'>  <!--用户选择注册身份-->
+  <image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/548my-photo.png' class='welcomeImage'></image>
+  <view plain='true' bindtap='selectUser' class='welcomeButton'>我想参加活动</view>
+  <view plain='true' bindtap='selectUp'class='welcomeButton'>我想发布活动</view>
+</view>
+
+
+<view class="question">   <!--调用表单组件-->
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class='p2'>
+<picker name="Organization" bindchange="OrganizationChange" value="{{indexOr}}" range="{{Organization}}" >
+      选择所属社区：{{Organization[indexOr]}}
+</picker></view>
+  <input placeholder="填写所在学院" name="college" class='p1' wx:if="{{identity_page=='user'}}"></input>
+  <input placeholder="填写所属组织" name="college" class='p1' wx:if="{{identity_page=='up'}}"></input>
+  <picker name="Class" bindchange="ClassChange" value="{{indexCl}}" range="{{Class}}" class='p1' wx:if="{{identity_page=='user'}}">
+      年级：{{Class[indexCl]}}
+</picker>
+<checkbox-group bindchange="checkboxChange" name="items" class='p1'>
+  <label  wx:for="{{items}}" wx:key="value">
+    <checkbox value="{{item.value}}" checked="{{item.checked}}">
+    {{item.name}}</checkbox>
+  </label>
+</checkbox-group>
+<!--
+<view flex-direction='row' class='p1'>
+<radio-group bindchange="identityChange" name="identity" >
+        <label  wx:for="{{identity}}" wx:key="value"  >
+
+          
+            <radio value="{{item.value}}"   >
+          
+          {{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+  -->
+<view class='p1' style="display:flex;flex-direction:column " wx:if="{{identity_page=='up'}}">
+  <text>请添加您的证明材料</text>
+  <text>（公众号链接或相关证件图片）</text>
+</view>
+  
+  <button formType="submit" class='submitButton' plain='true'>提交</button>
+</form>
+</view>
+
+
+<toast id='toast'></toast>   <!--背景与提示框-->
+<import src="./../../common/html/normal.wxml"/>
+<template is="background" />

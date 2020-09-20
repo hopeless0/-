@@ -1,0 +1,68 @@
+.box
+{
+  margin:15rpx 30rpx 10rpx 30rpx;
+  height:220rpx;
+  background-size: contain;
+  background-image:url("https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/682my-photo.png?sign=89ea74543e6c18f582df48ab96b24b1e&t=1599887534" );
+  background-repeat:no-repeat;
+  background-position:left top;
+  font-family:xinWei;
+}
+
+
+.boxtitle{
+  font-size:40rpx;
+  
+}
+.boxdate{
+  font-size:20rpx;
+    display:flex;
+  justify-content:space-between;
+  max-width:90%;
+}
+.boximage{
+  max-height:50%;
+  max-width:95%;
+}
+.bimage{
+  width:750rpx;
+  height:1334rpx;
+  position:fixed;
+  z-index:-50;
+}
+.bigbox
+{
+  margin:35rpx;
+  width:640rpx;
+  height:500rpx;
+  padding:40rpx 20rpx 0 20rpx;
+  background-origin:padding-box;
+  background-size:100% 100%;
+  background-image:url("https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/684my-photo.png?sign=4c857be26c93f6ea18394472ee9e02c9&t=1599890293" );
+  background-repeat:no-repeat;
+  font-family:xinKai;
+}
+.pic
+{
+   height:350rpx;
+   width:700rpx;
+}
+.QR
+{
+   height:200rpx;
+   width:200rpx;
+   border-width:3px;
+   border-color:gray;
+   border-style:solid;
+}
+.overImage
+{
+  position: relative;
+  left:420rpx;
+  bottom:200rpx;
+  z-index:999;
+  height:250rpx;
+  width:250rpx;
+
+
+}

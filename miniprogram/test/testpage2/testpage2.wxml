@@ -1,0 +1,9 @@
+<view>{{id}}</view>
+<movable-area>
+        <movable-view x="{{x}}" y="{{y}}" bindchange='onchange' direction="horizontal" inertia>
+          <image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/281my-photo.png' mode='aspectFit'></image>
+        </movable-view>
+</movable-area>
+<pageSlider>
+<view>ssss</view>
+</pageSlider>

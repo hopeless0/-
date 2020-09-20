@@ -1,0 +1,24 @@
+/* miniprogram/page/message/message.wxss */
+.text
+{
+  
+  margin-top:150rpx;
+  padding:150rpx 0 0 0rpx;
+  font-weight:500;
+  font-size:200%;
+}
+.tohidden
+{
+  position:absolute;
+  
+  display:flex;
+  flex-direction:column;
+  font-weight:300;
+  color:#A9A9A9;
+
+}
+.textarea{
+  border-width:1rpx;
+ margin:0 0 0 0rpx;
+  position:relative;
+}

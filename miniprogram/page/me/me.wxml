@@ -1,0 +1,35 @@
+<!--miniprogram/page/me/me.wxml-->
+
+
+<view class='head'>
+<view class='college'>{{college}}</view>
+<view bindtap="shownTypeChange" class='typeChange'></view>
+<view class='add'></view>
+</view>
+<view >
+<navigator url='../../page/userenter/userenter'><view wx:if='{{enterRegister}}' class='register'>点击此处注册</view></navigator>
+
+</view>
+
+   <view class='personal'>
+   <image  src="{{userInfo.avatarUrl}}" class='small'></image>
+   <view >{{userInfo.nickName}}</view></view>
+   <import src="./../../common/html/normal.wxml"/>
+
+<block wx:for="{{Data}}" wx:key="*this" >   
+  
+  <navigator url="./../detail/detail" bindtap="nextone" data-index="{{Data[index]._id}}" >
+  <view class="box" wx:if='{{(Data[index].overdue)^shownType}}'><!--已审核-->
+    <view wx:if="{{Data[index].shown}}">
+    <template is="BOX" data="{{...Data[index]}}"/></view>   <!--使用模板-->
+    <view wx:if="{{!Data[index].shown}}" class='black'><!--未审核-->
+      <template is="BOX" data="{{...Data[index]}}"/></view>
+  </view>
+</navigator>
+
+</block>   
+<view class='foot'>
+<navigator url="./../message/message"><button plain='true'>我有话说</button></navigator>
+<navigator url="./../up/up"><button plain='true'>我要发布</button></navigator>
+</view>
+  <template is="background" />

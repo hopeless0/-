@@ -1,0 +1,16 @@
+.box{
+  height:200rpx;
+  
+}
+.title{
+  font-size:100%;
+
+}
+.date{
+  font-size:20%;
+}
+.p{
+  height:100rpx;
+  color:red;
+  background-image: url("https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/682my-photo.png?sign=3dac74bf382c9c854d00721b0a02f09c&t=1599497662");
+}

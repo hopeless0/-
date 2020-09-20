@@ -1,0 +1,74 @@
+/* miniprogram/page/home/home.wxss */
+.typeChoose{
+  display:inline-block;
+  font-size:90%;
+  font-family:xinKai;
+  width:150rpx;
+  height:110rpx;
+  vertical-align: top;
+  padding:75rpx 0rpx 0rpx 30rpx;
+  background-size:150rpx 100rpx;
+  background-position:center;
+  background-image:url('https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/6948my-photo.png?sign=95105418a050f49b9581b33a91a902c9&t=1600437790');
+  background-repeat:no-repeat;
+  
+  
+}
+.chooseList{
+  display:flex;
+  justify-content: space-around;
+}
+.foot{
+  position:fixed;
+  bottom:0;
+
+
+  
+}
+movable-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rpx;
+  width: 50rpx;
+
+}
+
+movable-area {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:600rpx;
+  z-index:1;
+  height: 50rpx;
+  margin: 0 20rpx 20rpx 20rpx;
+  background-image:url(https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/2187my-photo.png?sign=0f7cbe15d1f2fe1e17a6a70c1c5477ed&t=1600364638);
+  background-size:cover;
+  background-position:left bottom;
+  overflow: hidden;
+
+}
+.test
+{
+  font-family:xinWei;
+}
+.smallButton{
+  position:fixed;
+  right:30rpx;
+  bottom:20rpx;
+  width:60rpx;
+  height:60rpx;
+  
+  background-size:contain;
+  background-image:url(https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/1787my-photo.png?sign=8d92f9267a9636cdb2e7d7b28f0ecab1&t=1600594899);
+  background-repeat:no-repeat;
+}
+.movableText{
+  position:fixed;
+  bottom:30rpx;
+  left:200rpx;
+  z-index:2;
+  font-size:30rpx;
+  font-family:xinKai;
+  color:white;
+}

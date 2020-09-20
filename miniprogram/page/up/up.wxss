@@ -1,0 +1,61 @@
+/* miniprogram/page/up/up.wxss */
+#Issuing
+{
+  padding-left:10rpx;
+  padding-top:5rpx;
+}
+#title
+{
+  padding-left:10rpx;
+  padding-top:15rpx;
+}
+#content
+{
+  padding-left:10rpx;
+  padding-top:15rpx;
+
+}
+.date
+{
+  padding-left:12rpx;
+  padding-top:6rpx;
+
+}
+.picText{
+  font-family:xinKai;
+  padding-top:30rpx;
+  font-size:24;
+  font-weight:550;
+  text-align:center;
+}
+.QRText{
+  padding-top:30rpx;
+  font-family:xinKai;
+  font-size:20;
+  text-align:center;
+}
+.upl
+{
+  height:150rpx;
+  width:150rpx;
+}
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+
+}
+.QRs
+{
+  display:flex;
+  flex-direction:row;
+}

@@ -1,0 +1,58 @@
+/* miniprogram/page/me/me.wxss */
+.small
+{
+  height:50rpx;
+  width:50rpx;
+}
+.register
+{
+  text-align:center;
+  font-size:150%;
+  padding-top:100rpx;
+  font-weight:560;
+}
+.personal
+{
+  display:flex;
+  
+}
+.foot
+{
+  display:flex;
+  position:fixed;
+  bottom:0;
+  justify-content:space-around;
+}
+.typeChange
+{
+  width:80rpx;
+  height:80rpx;
+  padding-left:40rpx;
+  background-size:contain;
+  background-image:url(https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/4457my-photo.png?sign=2d0b2949fc690039a7d80281572e20eb&t=1600595108);
+  background-repeat:no-repeat;
+}
+.college
+{
+  font-size:80rpx;
+  font-family:xinKai;
+  font-weight:550;
+  padding:50rpx 0 0 20rpx ;
+}
+.head
+{
+  display:flex;
+  align-items:flex-end;
+}
+.add
+{
+  width:80rpx;
+  height:80rpx;
+  padding-left:40rpx;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-image:url(https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/3712my-photo.png?sign=cdbba189de77b0548335519085b45d39&t=1600595323);
+}
+.black{
+  filter:brightness(60%);
+}

@@ -1,0 +1,61 @@
+<!--miniprogram/page/up/up.wxml-->
+<view class='box'>
+<view bindtap='upl' data-index='pic' class='picText' wx:if='{{picTextHidden}}'>请上传您的海报</view>
+<image src="{{fileID_pic}}" mode="scaleToFill" class='boximage'></image>
+</view>
+
+
+<form catchsubmit="formSubmit" catchreset="formReset">
+<view class='box'>
+<input placeholder="发布机构" name="Issuing" id='Issuing'></input>
+<input placeholder="输入标题" name="title" id='title'></input>
+</view>
+
+
+<view class="box">
+<picker name="datestart" mode="date" value="{{datestart}}" start="2020-09-01" end="2030-09-01" bindchange="bindDateChange_start">
+    <view class='date'>
+      开始时间: {{datestart}}
+    </view>
+  </picker>
+  <picker name="dateend" mode="date" value="{{dateend}}" start="2020-09-01" end="2030-09-01" bindchange="bindDateChange_end">
+    <view class='date'>
+      结束时间: {{dateend}}
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{type}}" name="type">
+    <view class='date'>
+      活动类型：{{type[index]}}
+    </view>
+  </picker>
+</view>
+<view class='bigbox'><textarea placeholder="输入内容" name='content'id='content' ></textarea></view>
+
+
+<view class='bigbox'>
+  <view bindtap='showMask' data-index='QR' class='QRText' wx:if='{{QRTextHidden}}'>
+    <text>请添加您的社群联系方式\n（告诉大家如何才能联系到你们吧）</text>
+    <image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/9416my-photo.png' mode='aspectFit' class='upl'></image>
+  </view>
+<image src="{{fileID_QR}}" mode="scaleToFill" class='QR'></image>
+<image src="{{fileID_QR2}}" mode="scaleToFill" class='QR'></image>
+<image src="{{fileID_QR3}}" mode="scaleToFill" class='QR'></image>
+</view>
+<button  type="primary" formType="submit" plain='true' wx:if='{{canSubmit}}'>提交</button>
+</form>
+
+
+<view wx:if='{{maskShown}}' class='mask' wx:if='{{!QRTextHidden}}'>  <!--弹出的联系方式输入框-->
+  <input placeholder="输入个人联系方式" bindblur='inputPersonal' ></input>
+  <view class='QRs'>    <!--待优化-->
+    <view bindtap='upl' data-index='QR' class='QRText'><image src="{{fileID_QR}}" mode="scaleToFill" class='QR'></image></view>    
+    <view bindtap='upl' data-index='QR'  class='QRText'><image src="{{fileID_QR2}}" mode="scaleToFill" class='QR'></image></view>
+    <view bindtap='upl' data-index='QR'  class='QRText'><image src="{{fileID_QR3}}" mode="scaleToFill" class='QR'></image></view>
+  </view>
+  <view bindtap='closeMask'>确定</view>
+</view>
+
+
+<toast id='toast'></toast>
+<import src="./../../common/html/normal.wxml"/>
+<template is="background" />

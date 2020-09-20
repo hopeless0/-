@@ -1,0 +1,7 @@
+<view wx:if='{{shown}}' class='mask' bindtap='close'>
+<view class='mainContent'>
+<view class='title'>{{title}}</view>
+<view class='content'>{{content}}</view>
+<view class="reject" bindtap='returnHome'>确定</view>
+</view>
+</view>

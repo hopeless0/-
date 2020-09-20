@@ -1,0 +1,22 @@
+/* miniprogram/page/detail/detail.wxss */
+@import"../../common/css/moveable.wxss";
+.image
+{
+  margin:30rpx;
+  width:690rpx;
+}
+.foot
+{
+  position:fixed;
+  
+  bottom:5rpx;
+  left:50rpx;
+}
+.enterDiscuss
+{
+  height:80rpx;
+  width:140rpx;
+  position:absolute;
+  right:60rpx;
+  top:320rpx;
+}

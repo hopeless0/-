@@ -1,0 +1,13 @@
+<!--miniprogram/page/discuss/discuss.wxml-->
+<block wx:for='{{ discussArea}}' >
+<view class='discuss'>
+ <image src='{{item.avatarUrl}}' class='small'></image>
+ <view class='content'>{{item.content}}</view>
+</view>
+</block>
+<view class='foot'>
+<input placeholder="输入发言" bindblur='input' ></input>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="upload" plain='true'>发言</button>
+</view>
+<import src="./../../common/html/normal.wxml"/>
+<template is="background" />

@@ -1,0 +1,5 @@
+<!--components/pageSlider/pageSlider.wxml-->
+<!--作为组件实现-->
+<view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+  <slot></slot>
+</view>

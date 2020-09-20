@@ -1,0 +1,19 @@
+/* test/testpage2/testpage2.wxss */
+movable-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rpx;
+  width: 50rpx;
+
+}
+
+movable-area {
+  height: 50rpx;
+  width: 500rpx;
+  margin: 50rpx;
+  background-image:url(https://686f-hopeless00-cx362-1301226357.tcb.qcloud.la/2187my-photo.png?sign=0f7cbe15d1f2fe1e17a6a70c1c5477ed&t=1600364638);
+  background-size:cover;
+  overflow: hidden;
+
+}

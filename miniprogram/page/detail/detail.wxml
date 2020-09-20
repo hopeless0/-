@@ -1,0 +1,16 @@
+<!--miniprogram/page/detail/detail.wxml-->
+<import src="./../../common/html/normal.wxml"/>
+<view wx:if="{{!selected}}" ><template is='moveable' data='{{...moveable}}'/></view>
+<block wx:if="{{selected}}" ><button bindtap="unselect" class='foot' plain='true'>取消收藏</button></block>  <!--收藏选择-->
+
+<pageSlider id='pageSlider'><!--滑动内容-->
+
+<template is="BOX" data="{{...Detail}}" />     <!--套用模板-->
+<view class="bigbox" >{{Detail.content}}</view>
+<view class='bigbox'>
+  <navigator url='../discuss/discuss'><image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/8368my-photo.png' mode='aspectFit' class='enterDiscuss'></image></navigator>
+  <text >详情请关注公众号\n或请添加QQ群\n或请添加微信号\n</text>
+  <image src="{{Detail.fileID_QR}}" class="image" mode="aspectFit" class='QR'></image></view>
+</pageSlider>
+
+<template is="background" />

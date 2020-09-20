@@ -1,0 +1,28 @@
+<!--miniprogram/page/home/home.wxml-->
+<movable-area >
+        <movable-view x="{{x}}" y="{{y}}" bindchange='onchange' direction="horizontal" inertia >
+          <image src='cloud://hopeless00-cx362.686f-hopeless00-cx362-1301226357/281my-photo.png' mode='aspectFit'></image>
+        </movable-view>
+</movable-area>
+<view class='movableText'>右滑进入个人箱子</view>
+<view class='smallButton'></view>
+<toast id='toast'></toast>
+<view class="chooseList"> <!--显示活动类型列表-->
+<view wx:for="{{chooseList}}" wx:key="*this"  bindtap="chooseList" data-index="{{index}}"   >
+  <view  class="typeChoose" style="Filter:{{chooseListColor[index]}}">{{chooseList[index]}}</view>
+  </view>
+</view>
+
+<import src="./../../common/html/normal.wxml"/>
+
+<block wx:for="{{Data}}" wx:key="*this">
+  
+  <navigator url="./../detail/detail" bindtap="nextone" data-index="{{Data[index]._id}}" >
+  <view class="box" wx:if='{{Data[index].shown}}'>
+    <template is="BOX" data="{{...Data[index]}}"/>
+  </view>
+</navigator>
+
+</block>
+
+<template is="background" />
