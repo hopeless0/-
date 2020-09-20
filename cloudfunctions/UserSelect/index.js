@@ -11,11 +11,7 @@ exports.main = async (event, context) => {
   if(event.type=="add")
   try {
     return await db.collection('UserInfo').where({_openid:OPENID
-
     })
-    
-  
-    
     .update({
       data: {
        select:_.push(event.id)
